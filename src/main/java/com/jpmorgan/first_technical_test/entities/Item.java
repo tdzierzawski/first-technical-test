@@ -10,7 +10,7 @@ public class Item {
 	private String currency;
 	private Date instructionDate;
 	private Date settlementDate;
-	private String units;
+	private Integer units;
 	private Double pricePerUnit;
 	
 	public String getEntity() {
@@ -49,10 +49,10 @@ public class Item {
 	public void setSettlementDate(Date settlementDate) {
 		this.settlementDate = settlementDate;
 	}
-	public String getUnits() {
+	public Integer getUnits() {
 		return units;
 	}
-	public void setUnits(String units) {
+	public void setUnits(Integer units) {
 		this.units = units;
 	}
 	public Double getPricePerUnit() {
@@ -60,5 +60,8 @@ public class Item {
 	}
 	public void setPricePerUnit(Double pricePerUnit) {
 		this.pricePerUnit = pricePerUnit;
+	}
+	public Double getAmountUSD() {
+		return this.pricePerUnit*this.units*this.agreedFx;
 	}
 }
