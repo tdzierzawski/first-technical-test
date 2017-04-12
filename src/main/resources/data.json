@@ -1,0 +1,40 @@
+{
+	"items": [ 
+		{ 	"entity": "foo",
+		  	"buySell": "B",
+			"agreedFx": "0.50",
+			"currency": "SGP",
+			"instructionDate": "01 Jan 2016",
+			"settlementDate": "02 Jan 2016",
+			"units": "200",
+			"pricePerUnit": "100.25"
+		},
+		{ 	"entity": "bar",
+		  	"buySell": "S",
+			"agreedFx": "0.22",
+			"currency": "AED",
+			"instructionDate": "05 Jan 2016",
+			"settlementDate": "07 Jan 2016",
+			"units": "450",
+			"pricePerUnit": "150.25"
+		},
+		{ 	"entity": "foo",
+		  	"buySell": "S",
+			"agreedFx": "0.50",
+			"currency": "SGP",
+			"instructionDate": "01 Jan 2016",
+			"settlementDate": "02 Jan 2016",
+			"units": "100",
+			"pricePerUnit": "100.25"
+		},
+		{ 	"entity": "tar",
+		  	"buySell": "B",
+			"agreedFx": "0.15",
+			"currency": "SAR",
+			"instructionDate": "11 Jan 2016",
+			"settlementDate": "13 Jan 2016",
+			"units": "300",
+			"pricePerUnit": "130.25"
+		}
+	]
+}
