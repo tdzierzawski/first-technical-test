@@ -2,7 +2,7 @@ package com.jpmorgan.first_technical_test.service;
 
 public class ReportFactory {
 
-	public Report getReport(String reportType){
+	public Report getReport(ReportType reportType){
 	      
 		if (reportType == null){
 			return null;
