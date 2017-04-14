@@ -6,14 +6,16 @@ import com.jpmorgan.first_technical_test.entities.Item;
 
 public class ReportUSDOutgoing implements Report {
 
-	public final static String MESSAGE = " amount in USD settled outgoing: ";
+	public final static String MESSAGE = "Amount in USD settled outgoing: ";
 	
 	public void generate(List<Item> units) {
+		
+		System.out.println(MESSAGE);
 		
 		for (Item unit : units) {			
 			if (unit.isOutgoing()) {
 				String amount = unit.getAmountUSD().toString();
-				System.out.println(unit.getSettlementDate()+MESSAGE+amount);
+				System.out.println(unit.getSettlementDate()+amount);
 			}
 		}
 		

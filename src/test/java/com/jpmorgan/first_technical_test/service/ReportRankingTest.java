@@ -86,7 +86,7 @@ public class ReportRankingTest {
 		
 		rIn.generate(units);
 		
-		String expectedOutput = "1 "+item.getEntity()+System.getProperty("line.separator")+"2 "+item2.getEntity()+System.getProperty("line.separator");
+		String expectedOutput = ReportRanking.MESSAGE+System.getProperty("line.separator")+"1 "+item.getEntity()+System.getProperty("line.separator")+"2 "+item2.getEntity()+System.getProperty("line.separator");
 		assertEquals(expectedOutput, outContent.toString());
 	}
 	

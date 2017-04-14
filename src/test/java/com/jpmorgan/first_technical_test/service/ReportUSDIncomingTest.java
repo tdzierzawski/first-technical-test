@@ -69,7 +69,7 @@ public class ReportUSDIncomingTest {
 		
 		rIn.generate(units);
 		
-		String expectedOutput = item.getInstructionDate()+ReportUSDIncoming.MESSAGE+item.getAmountUSD()+System.getProperty("line.separator");
+		String expectedOutput = ReportUSDIncoming.MESSAGE+System.getProperty("line.separator")+item.getInstructionDate()+item.getAmountUSD().toString()+System.getProperty("line.separator");
 		assertEquals(expectedOutput, outContent.toString());
 	}
 	

@@ -14,6 +14,8 @@ public class ReportRanking implements Report {
 		
 		Collections.sort(units, new BuyInstructionComparator());
 		
+		System.out.println(MESSAGE);
+		
 		int i=1;
 		for (Item unit : units) {
 			if (unit.isOutgoing()) {				

@@ -69,7 +69,7 @@ public class ReportUSDOutgoingTest {
 
 		rOut.generate(units);
 		
-		String expectedOutput = item.getSettlementDate()+ReportUSDOutgoing.MESSAGE+item.getAmountUSD()+System.getProperty("line.separator");
+		String expectedOutput = ReportUSDOutgoing.MESSAGE+System.getProperty("line.separator")+item.getSettlementDate()+item.getAmountUSD().toString()+System.getProperty("line.separator");
 		assertEquals(expectedOutput, outContent.toString());
 	}
 	
