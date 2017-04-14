@@ -64,4 +64,16 @@ public class Item {
 	public Double getAmountUSD() {
 		return this.pricePerUnit*this.units*this.agreedFx;
 	}
+	public boolean isIncoming() {
+		if (null == this.getBuySell())
+			return false;
+
+		return this.getBuySell().equals("S");
+	}
+	public boolean isOutgoing() {
+		if (null == this.getBuySell())
+			return false;
+
+		return this.getBuySell().equals("B");
+	}
 }

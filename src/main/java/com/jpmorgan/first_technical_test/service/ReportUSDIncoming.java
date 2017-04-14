@@ -6,10 +6,15 @@ import com.jpmorgan.first_technical_test.entities.Item;
 
 public class ReportUSDIncoming implements Report {
 
+	public final static String MESSAGE = " amount in USD settled incoming: ";
+	
 	public void generate(List<Item> units) {
 		
 		for (Item unit : units) {
-			System.out.println("Amount in USD settled incoming: "+unit.getAmountUSD());
+			if (unit.isIncoming()) {
+				String amount = unit.getAmountUSD().toString();
+				System.out.println(unit.getInstructionDate()+MESSAGE+amount);
+			}
 		}
 
 	}
