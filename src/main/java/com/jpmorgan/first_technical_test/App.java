@@ -7,6 +7,7 @@ import com.jpmorgan.first_technical_test.entities.Item;
 import com.jpmorgan.first_technical_test.service.Report;
 import com.jpmorgan.first_technical_test.service.ReportFactory;
 import com.jpmorgan.first_technical_test.service.ReportType;
+import com.jpmorgan.first_technical_test.utils.DataMapper;
 
 /**
  * J.P Morgan Java Technical Test
@@ -17,7 +18,13 @@ public class App
     {
     	ReportFactory reportFactory = new ReportFactory();
 
-    	List<Item> units = new ArrayList<Item>();
+    	List<Item> units = null;
+    	
+    	try {
+			units = DataMapper.proceed();
+		} catch (java.text.ParseException e) {
+			e.printStackTrace();
+		}
     	
         Report reportUSDIncoming = reportFactory.getReport(ReportType.USD_INCOMING);
 
@@ -31,4 +38,6 @@ public class App
 
         reportRanking.generate(units);
     }
+    
+    
 }
